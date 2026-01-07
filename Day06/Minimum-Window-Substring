@@ -1,0 +1,21 @@
+#include <string>
+#include <unordered_map>
+using namespace std;
+
+string minWindow(string s, string t) {
+    unordered_map<char,int> need;
+    for(char c : t) need[c]++;
+    int l = 0, cnt = t.size(), start = 0, len = 1e9;
+
+    for(int r = 0; r < s.size(); r++){
+        if(need[s[r]]-- > 0) cnt--;
+        while(cnt == 0){
+            if(r - l + 1 < len){
+                len = r - l + 1;
+                start = l;
+            }
+            if(++need[s[l++]] > 0) cnt++;
+        }
+    }
+    return len == 1e9 ? "" : s.substr(start, len);
+}
