@@ -1,0 +1,17 @@
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int maxScore(vector<int>& c, int k) {
+    int n = c.size();
+    int total = 0;
+
+    for(int i = 0; i < k; i++) total += c[i];
+
+    int ans = total;
+    for(int i = 1; i <= k; i++){
+        total += c[n - i] - c[k - i];
+        ans = max(ans, total);
+    }
+    return ans;
+}
