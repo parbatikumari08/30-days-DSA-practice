@@ -1,4 +1,4 @@
-struct ListNode { int val; ListNode* next; };
+struct ListNode { int val; ListNode* next; }; 
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     ListNode dummy(0), *cur = &dummy;
