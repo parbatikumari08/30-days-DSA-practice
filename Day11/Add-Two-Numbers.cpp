@@ -1,7 +1,7 @@
 struct ListNode { int val; ListNode* next; }; 
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    ListNode dummy(0), *cur = &dummy;
+    ListNode dummy(0), *cur = &dummy; 
     int carry = 0;
 
     while(l1 || l2 || carry){
