@@ -3,7 +3,7 @@ struct ListNode { int val; ListNode* next; };
 ListNode* reverseEvenLengthGroups(ListNode* head) {
     ListNode dummy(0); dummy.next=head;
     ListNode* prev=&dummy; int size=1;
-
+ 
     while(head){
         ListNode* cur=head;
         int cnt=0;
