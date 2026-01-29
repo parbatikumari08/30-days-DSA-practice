@@ -1,7 +1,7 @@
 struct ListNode { int val; ListNode* next; };
 
 ListNode* reverseKGroup(ListNode* head, int k) {
-    ListNode* cur = head;
+    ListNode* cur = head;  
     int cnt = 0;
     while(cur && cnt < k) cur = cur->next, cnt++;
     if(cnt < k) return head;
