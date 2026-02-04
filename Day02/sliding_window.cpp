@@ -4,7 +4,7 @@ using namespace std;
 vector<int> maxSlidingWindow(vector<int>& nums, int k) {
     deque<int> dq;
     vector<int> res;
-
+ 
     for(int i = 0; i < nums.size(); i++){
         while(!dq.empty() && dq.front() <= i - k)
             dq.pop_front();
