@@ -1,6 +1,5 @@
 #include <unordered_set>
 using namespace std;
-
 struct ListNode { int val; ListNode* next; };
 
 ListNode* getIntersectionNode(ListNode* a, ListNode* b) {
